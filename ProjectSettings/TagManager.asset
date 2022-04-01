@@ -10,6 +10,8 @@ TagManager:
   - dialog_canvas
   - dialog_text
   - dialog_button
+  - loadingAnim
+  - loadingScreen
   layers:
   - Default
   - TransparentFX
