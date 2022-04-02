@@ -1,12 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class Computer : MonoBehaviour
 {
     public float secondsUntilSoftwareUpdate = 60;
     public Popup popupPrefab;
+    public static Computer instance;
+
+    public static Computer Instance()
+    {
+        return instance;
+    }
+
+    public bool SoftwareUpdateHasHappened()
+    {
+        return (secondsUntilSoftwareUpdate < 0);
+    }
+
+    void Awake()
+    {
+        instance = this;
+    }
         
     // Start is called before the first frame update
     void Start()
