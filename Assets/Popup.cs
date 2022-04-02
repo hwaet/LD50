@@ -22,7 +22,7 @@ public class Popup : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // TODO: Clearly wrong. This script shouldn't have to hard-code the resolution.
+        // TODO: Clearly wrong. This script shouldn't have to hard-code the resolution. All magic numbers here refer to pixel measures
         this._text.GetComponent<LayoutElement>().preferredWidth = Mathf.Clamp(this._text.text.Length * 2, 100, 500);
     }
 
@@ -79,7 +79,7 @@ public class Popup : MonoBehaviour
      * size is measured (pixel dimensions) is different than how this popup is resized (float range of axes)
      *
      * So, we measure the size of the text's rectangle (done before this method is called), compare that to the
-     * supposed pixel measure of this game, and then conver to a float for randomized positioning/sizing.
+     * supposed pixel measure of this game, and then convert to a float for randomized positioning/sizing.
      *
      * Not fun.
      */
@@ -96,6 +96,7 @@ public class Popup : MonoBehaviour
         float targetResolutionWidth = 1600;
         float targetResolutionHeight = 900;
 
+        // The magic number at the end is for predictable bloat for the panel itself. Very fudgy.
         float widthFactor = (rectForText.width / targetResolutionWidth) + 0.1f;
         float heightFactor = (rectForText.height / targetResolutionHeight) + 0.1f;
         
