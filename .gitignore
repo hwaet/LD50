@@ -36,3 +36,9 @@ sysinfo.txt
 *.unitypackage
 Assets/Music/Crowd,Fair,CNE,Interior,Food Building,Eating Area,Medium Distant,Thick,Wash,Ambient Fan.wav
 Assets/Music/Crowd,Fair,CNE,Interior,Food Building,Eating Area,Medium Distant,Thick,Wash,Ambient Fan.wav.meta
+
+# Rider/etc
+
+.idea/*
+Logs/*
+Logs/
