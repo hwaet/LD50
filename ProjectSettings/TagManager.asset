@@ -12,6 +12,7 @@ TagManager:
   - dialog_button
   - loadingAnim
   - loadingScreen
+  - IceCreamCamera
   layers:
   - Default
   - TransparentFX
