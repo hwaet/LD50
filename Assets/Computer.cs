@@ -22,6 +22,8 @@ public class Computer : MonoBehaviour
     {
         var children = new List<Transform>();
         
+        // TODO: this could be made to use Linq and forego side effects... but how????
+        
         foreach (Transform popupTransform in _popupsContainer)
         {
             if (popupTransform.GetComponent<Popup>() == popup)
