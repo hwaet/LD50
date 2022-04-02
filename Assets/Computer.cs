@@ -70,6 +70,7 @@ public class Computer : MonoBehaviour
         secondsUntilSoftwareUpdate -= Time.deltaTime;
     }
 
+    [ContextMenu("Spawn More Popups")]
     private void SpawnPopup()
     {
         var popup = Instantiate(popupPrefab.gameObject, transform.position, Quaternion.identity);
