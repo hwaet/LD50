@@ -6,6 +6,7 @@ using UnityEngine.Serialization;
 public class Computer : MonoBehaviour
 {
     public float secondsUntilSoftwareUpdate = 60;
+    public Popup popupPrefab;
         
     // Start is called before the first frame update
     void Start()
@@ -17,5 +18,11 @@ public class Computer : MonoBehaviour
     void Update()
     {
         secondsUntilSoftwareUpdate -= Time.deltaTime;
+    }
+
+    private void SpawnPopup()
+    {
+        var popup = Instantiate(popupPrefab.gameObject, transform.position, Quaternion.identity);
+        popup.transform.parent = transform;
     }
 }

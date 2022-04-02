@@ -558,7 +558,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a86830cbd10aaab4589c65e2e8fc5690, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  secondsUntilUpdate: 60
+  secondsUntilSoftwareUpdate: 60
+  popupPrefab: {fileID: 4131124562151686677, guid: 8610bd13334f9a845b95d1b8c879bbd0, type: 3}
 --- !u!1 &1034024097
 GameObject:
   m_ObjectHideFlags: 0
