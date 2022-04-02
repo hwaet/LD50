@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
 			if (ctx.performed) Debug.Log("fire" + hit.collider);
             Scoop scoop = hit.collider.gameObject.GetComponent<Scoop>();
 
-            scoop.RegisterHit();
+            scoop?.RegisterHit();
 		}
 
 	}
