@@ -8,8 +8,8 @@ using Random = UnityEngine.Random;
 
 public class Popup : MonoBehaviour
 {
-    private float _minWidth = 0.1f;
-    private float _minHeight = 0.1f;
+    public float minWidth = 0.1f;
+    public float minHeight = 0.1f;
     private Vector3? _moveOffset;
     
     // Start is called before the first frame update
@@ -20,8 +20,8 @@ public class Popup : MonoBehaviour
         var anchorMaxX = Random.Range(0f, 1f);
         var anchorMaxY = Random.Range(0f, 1f);
         
-        var anchorMinX = Random.Range(0, anchorMaxX - _minWidth);
-        var anchorMinY = Random.Range(0, anchorMaxY - _minHeight);
+        var anchorMinX = Random.Range(0, anchorMaxX - minWidth);
+        var anchorMinY = Random.Range(0, anchorMaxY - minHeight);
 
         rectTransform.anchorMax = new Vector2(anchorMaxX, anchorMaxY);
         rectTransform.anchorMin = new Vector2(anchorMinX, anchorMinY);
