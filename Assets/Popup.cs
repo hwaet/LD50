@@ -59,5 +59,6 @@ public class Popup : MonoBehaviour
     public void StartMoving()
     {
         _moveOffset = (Vector3)Mouse.current.position.ReadValue() - transform.position;
+        Computer.Instance().MoveMeToTheFront(this);
     }
 }
