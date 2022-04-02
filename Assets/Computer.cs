@@ -24,7 +24,8 @@ public class Computer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        SpawnPopup();
+        SpawnPopup();
     }
 
     // Update is called once per frame

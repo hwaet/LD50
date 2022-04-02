@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2295475716722238936}
   - component: {fileID: 1565276698339008287}
   m_Layer: 5
-  m_Name: Text
+  m_Name: X
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -90,8 +90,9 @@ GameObject:
   - component: {fileID: 7042053865861832531}
   - component: {fileID: 4377536917197583434}
   - component: {fileID: 4469238127662860849}
+  - component: {fileID: 6214904212447378094}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: TopChrome
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -112,10 +113,10 @@ RectTransform:
   m_Father: {fileID: 5473527954553222342}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.94}
+  m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -29.5}
+  m_SizeDelta: {x: 0, y: 59}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4377536917197583434
 CanvasRenderer:
@@ -155,6 +156,35 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6214904212447378094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2797924950701461865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4131124562151686677}
+          m_TargetAssemblyTypeName: Popup, Assembly-CSharp
+          m_MethodName: StartMoving
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &6490515399388943474
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,7 +198,7 @@ GameObject:
   - component: {fileID: 5918530820896008523}
   - component: {fileID: 3742404617130436814}
   m_Layer: 5
-  m_Name: Button
+  m_Name: DismissButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -322,10 +352,10 @@ RectTransform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -495.5}
+  m_SizeDelta: {x: 0, y: 991}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7292791752361385919
 CanvasRenderer:
