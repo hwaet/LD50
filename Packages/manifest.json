@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "com.hwaet.context-dialogue-system": "https://github.com/hwaet/context-dialogue-system.git#develop",
     "com.hwaet.menu": "https://github.com/hwaet/Menu.git",
     "com.hwaet.scene-container": "https://github.com/hwaet/SceneContainer.git",
     "com.unity.collab-proxy": "1.15.13",

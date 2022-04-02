@@ -1,18 +1,11 @@
 {
   "dependencies": {
-    "com.hwaet.context-dialogue-system": {
-      "version": "https://github.com/hwaet/context-dialogue-system.git#develop",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "1bc8b5c9d9de7b8d01170dc93b2aa17e5705038b"
-    },
     "com.hwaet.menu": {
       "version": "https://github.com/hwaet/Menu.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "e73fc07b559772cb8aaad73b039051bcb74f3f8f"
+      "hash": "b7330a3ee2118d63e2869a34e245e24d8b441ec7"
     },
     "com.hwaet.scene-container": {
       "version": "https://github.com/hwaet/SceneContainer.git",
