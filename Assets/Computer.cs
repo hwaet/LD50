@@ -21,9 +21,9 @@ public class Computer : MonoBehaviour
     public void MoveMeToTheFront(Popup popup)
     {
         var children = new List<Transform>();
-        
+
         // TODO: this could be made to use Linq and forego side effects... but how????
-        
+
         foreach (Transform popupTransform in _popupsContainer)
         {
             if (popupTransform.GetComponent<Popup>() == popup)
@@ -31,7 +31,7 @@ public class Computer : MonoBehaviour
                 children.Add(popup.transform);
             }
         }
-        
+
         foreach (Transform popupTransform in _popupsContainer)
         {
             if (popupTransform.GetComponent<Popup>() != popup)
@@ -56,7 +56,7 @@ public class Computer : MonoBehaviour
         instance = this;
         _popupsContainer = transform.Find("PopupsContainer");
     }
-        
+
     // Start is called before the first frame update
     void Start()
     {
@@ -70,11 +70,17 @@ public class Computer : MonoBehaviour
         secondsUntilSoftwareUpdate -= Time.deltaTime;
     }
 
-    [ContextMenu("Spawn More Popups")]
     private void SpawnPopup(string content)
     {
         var popup = Instantiate(popupPrefab.gameObject, transform.position, Quaternion.identity);
         popup.transform.SetParent(_popupsContainer, false);
         popup.GetComponent<Popup>().SetText(content);
+
+    }
+
+    [ContextMenu("Spawn More Popups")]
+    private void SpawnPopup()
+    {
+        SpawnPopup("test test test test");
     }
 }

@@ -11,35 +11,36 @@ public class Popup : MonoBehaviour
     public float minWidth = 0.1f;
     public float minHeight = 0.1f;
     private Vector3? _moveOffset;
-    private Text _text;
+    public Text _text;
     private bool _hasBeenScaledAndPositioned = false;
 
     void Awake()
     {
-        this._text = this.transform.Find("Text").GetComponent<Text>();
+        if (_text==null) this._text = this.transform.Find("Text").GetComponent<Text>();
     }
     
     // Start is called before the first frame update
     void Start()
     {
         // TODO: Clearly wrong. This script shouldn't have to hard-code the resolution. All magic numbers here refer to pixel measures
-        this._text.GetComponent<LayoutElement>().preferredWidth = Mathf.Clamp(this._text.text.Length * 2, 100, 500);
+        //this._text.GetComponent<LayoutElement>().preferredWidth = Mathf.Clamp(this._text.text.Length * 2, 100, 500);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!_hasBeenScaledAndPositioned)
-        {
-            /*
+		if (!_hasBeenScaledAndPositioned)
+		{
+			/*
              * since we are only able to set the preferred width in Start(), it takes at least one tick to resize
              * so we use this lossy JIT evaluator
              */
-            
-            ScaleAndPosition();
-        }
-        
-        if (_moveOffset == null)
+
+			ScaleAndPosition();
+		}
+
+		if (_moveOffset == null)
         {
             return;
         }
@@ -83,6 +84,7 @@ public class Popup : MonoBehaviour
      *
      * Not fun.
      */
+    [ContextMenu("Scale and position")]
     private void ScaleAndPosition()
     {
         var rectForText = this._text.GetComponent<RectTransform>().rect;
@@ -91,10 +93,13 @@ public class Popup : MonoBehaviour
         {
             return;
         }
-        
+
+        RectTransform rect = Computer.Instance().GetComponent<RectTransform>();
+        Vector2 screenSize = rect.sizeDelta;
+
         // TODO: Clearly wrong. This script shouldn't have to hard-code the resolution.
-        float targetResolutionWidth = 1600;
-        float targetResolutionHeight = 900;
+        float targetResolutionWidth = screenSize.x;
+        float targetResolutionHeight = screenSize.y;
 
         // The magic number at the end is for predictable bloat for the panel itself. Very fudgy.
         float widthFactor = (rectForText.width / targetResolutionWidth) + 0.1f;
@@ -117,9 +122,9 @@ public class Popup : MonoBehaviour
         rectTransform.offsetMax = new Vector2(0, 0);
         rectTransform.offsetMin = new Vector2(0, 0);
         
-        rectTransform.GetComponent<Image>().color = Color.green;
+        //rectTransform.GetComponent<Image>().color = Color.green;
         
         _hasBeenScaledAndPositioned = true;
-    }
+	}
     
 }

@@ -481,7 +481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   secondsUntilSoftwareUpdate: 10
-  popupPrefab: {fileID: 4131124562151686677, guid: 8610bd13334f9a845b95d1b8c879bbd0, type: 3}
+  popupPrefab: {fileID: 1125659997500812669, guid: 270d4a5220c132b4fb6ac221da90360f, type: 3}
 --- !u!114 &688571786
 MonoBehaviour:
   m_ObjectHideFlags: 0
