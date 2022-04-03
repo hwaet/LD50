@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/loadingScreen.unity
     guid: 30aee3b719b868140ba24d5bac5d2f96
+  - enabled: 1
+    path: Assets/Scenes/MainMenu/diorama.unity
+    guid: f89cf7a5b3570e14c96e106dc47244bc
   m_configObjects: {}

@@ -250,7 +250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wordsPerMinute: 150
-  indexToPrintTo: 11.5
+  indexToPrintTo: 5
   alphaCurve:
     serializedVersion: 2
     m_Curve:
@@ -451,7 +451,7 @@ GameObject:
   - component: {fileID: 2071153188}
   - component: {fileID: 2071153190}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Canvas Loading Screen
   m_TagString: loadingAnim
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -516,7 +516,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_TargetDisplay: 0
 --- !u!224 &2071153187
 RectTransform:
